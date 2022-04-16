@@ -18,6 +18,7 @@ jobs:
     - name: Install ebbs
       run: |
         pip install ebbs
+        pip install eot
     - name: Build
       run: |
         ebbs -v . --repo-username "${{ secrets.INFRASTRUCTURE_USERNAME }}" --repo-password "${{ secrets.INFRASTRUCTURE_PASSWORD }}" --event "pull_request"
