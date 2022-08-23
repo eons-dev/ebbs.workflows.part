@@ -35,7 +35,7 @@ Github Actions cannot use `git submodule`. Thus, we must use [git subrepo](https
 Clone with subrepo:
 ```shell
 mkdir -p .github/workflows
-git subrepo clone https://github.com/eons-dev/part_cpp-workflows.git .github/workflows
+git subrepo clone https://github.com/eons-dev/part_ebbs-workflows.git .github/workflows
 ```
 
 ## Features:
