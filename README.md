@@ -28,13 +28,14 @@ Make sure you have a valid EBBS github.json in the build folder of your director
 ```
 
 
-### Submodule
+### Subrepo
 
-This repo should make up the entirety of your .github folder.
+Github Actions cannot use `git submodule`. Thus, we must use [git subrepo](https://github.com/ingydotnet/git-subrepo).
 
-To get it there, clone this with [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
-```
-git submodule add https://github.com/eons-dev/part_ebbs-workflows.git .github/workflows
+Clone with subrepo:
+```shell
+mkdir -p .github/workflows
+git subrepo clone https://github.com/eons-dev/part_cpp-workflows.git .github/workflows
 ```
 
 ## Features:
