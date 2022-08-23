@@ -1,4 +1,4 @@
-name: ebbs release event
+name: ebbs event release
 
 on:
   release:

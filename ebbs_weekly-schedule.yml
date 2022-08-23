@@ -1,4 +1,4 @@
-name: ebbs weekly scheduled event
+name: ebbs schedule weekly
 
 on:
   schedule:

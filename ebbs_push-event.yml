@@ -1,4 +1,4 @@
-name: ebbs push event
+name: ebbs event push
 
 on:
   push:

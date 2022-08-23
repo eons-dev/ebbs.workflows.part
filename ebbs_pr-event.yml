@@ -1,4 +1,4 @@
-name: ebbs pull request event
+name: ebbs event pull request
 
 on:
   pull_request:
