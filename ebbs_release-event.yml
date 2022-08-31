@@ -29,4 +29,4 @@ jobs:
         repo_password: ${{ secrets.INFRASTRUCTURE_PASSWORD }}
       run: |
         cd build
-        ebbs -v . --config "github.json" --version "${{ github.event.release.tag_name }}" --event "release"
+        ebbs -v -e "github" -e "release" --version "${{ github.event.release.tag_name }}"
