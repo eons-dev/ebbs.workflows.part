@@ -4,7 +4,15 @@ Have [ebbs](https://github.com/eons-dev/bin_ebbs) manage your git repo!
 
 ## Usage
 
-### build/github.json
+### Automatic
+
+The easiest way to get started with these workflows and ebbs pipelines is to just run `ebbs -b boilerplate` from the root of your repository.
+
+See [the boilerplate docs](https://github.com/eons-dev/build_boilerplate) for more info.
+
+### Manual
+
+#### build/github.json
 Make sure you have a valid EBBS github.json in the build folder of your directory. This would be something like:
 
 ```json
@@ -14,7 +22,7 @@ Make sure you have a valid EBBS github.json in the build folder of your director
   "next": [
     {
       "build" : "publish",
-      "run_when" : "release",
+      "run_when_any" : "release",
       "copy" : [
         {"../../inc/" : "inc/"}
       ],
@@ -28,7 +36,7 @@ Make sure you have a valid EBBS github.json in the build folder of your director
 ```
 
 
-### Subrepo
+#### Subrepo
 
 Github Actions cannot use `git submodule`. Thus, we must use [git subrepo](https://github.com/ingydotnet/git-subrepo).
 
@@ -38,9 +46,11 @@ mkdir -p .github/workflows
 git subrepo clone https://github.com/eons-dev/part_ebbs-workflows.git .github/workflows
 ```
 
+Alternatively to using `subrepo`, you can manually download and extract the files in this repo to `.github/workflows`.
+
 ## Features:
 
-All ebbs workflows call your `build/github.json`.
+All ebbs workflows call your `build/build.json`.
 
 ### Activity Workflows
 
